@@ -1,0 +1,28 @@
+<%- include('../partials/header') -%>
+<body>
+  <header class="header">
+    <form class="form" role="search" method="post" action="/">
+      <input
+        class="form-control me-2"
+        type="text"
+        name="cityName"
+        value=""
+        placeholder="Enter city name"
+        aria-label="Search"
+      />
+      <button class="button" type="submit">
+        <span class="fas fa-search"></span>
+      </button>
+    </form>
+    <div class="content">
+      <p class="head2">Weather in <%=cityLocation%></p>
+      <p class="head1"><%# weatherIcon%> <%= weather %> Deg</p>
+      <p class="head3"><%= condition%></p>
+      <p class="head3">Humdity: <%= humidityCount%>%</p>
+      <p class="head3">Wind speed: <%= windSpeed%>km/hr</p>
+    </div>
+  </header>
+  <img src="/weatherBg.jfif" class="bgImage" />
+
+  <%- include('../partials/footer') -%>
+</body>
