@@ -2,6 +2,7 @@ const express = require("express");
 // const ejs = require("ejs");
 const https = require("https");
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 5000;
 
 const app = express();
 app.set("view engine", "ejs");
@@ -62,6 +63,6 @@ app.post("/", (req, res) => {
   });
 });
 
-app.listen(8000, () => {
-  console.log("Server running...");
+app.listen(port, () => {
+  console.log("Server running..." + port);
 });
